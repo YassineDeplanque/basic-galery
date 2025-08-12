@@ -1,12 +1,12 @@
-import { useState } from 'react';
+import { useState, useEffect, use } from 'react';
 import './App.css';
 
 function App() {
 
   const [clicked, setClicked] = useState("");
 
-  const image = ['https://i.pinimg.com/736x/e2/ec/31/e2ec318333608d137b47ce8f2a83eed0.jpg',
-                 'https://img.freepik.com/photos-gratuite/coucher-soleil-misurina_181624-34793.jpg?semt=ais_hybrid&w=740&q=80',
+  const image = ['https://wallpapercat.com/w/full/8/c/f/124601-3840x2160-desktop-4k-stranger-things-wallpaper-image.jpg',
+                 'https://wallpapercat.com/w/full/0/d/a/1165487-3840x2160-desktop-4k-landscape-wallpaper-photo.jpg',
                  'https://wallpapercat.com/w/full/0/f/3/5815630-3840x2160-desktop-hd-4k-wallpaper-image.jpg'
                 ];
 
@@ -18,6 +18,15 @@ function App() {
     setClicked("");
   }
   
+  useEffect(() => {
+    function handleKeyDown(event){
+      if(event.key == 'Escape'){
+        setClicked(false)
+        console.log('u did')
+      }
+    }
+    window.addEventListener('keydown', handleKeyDown)
+  })
 
   return (
     <div>
