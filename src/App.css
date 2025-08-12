@@ -1,4 +1,21 @@
-img {
-  height: 200px;
-  padding-right: 10px;
+.modal-overlay {
+  position: fixed;         /* Fixe la position par rapport à la fenêtre */
+  top: 0;                  /* Coin supérieur gauche */
+  left: 0;
+  width: 100vw;            /* Pleine largeur */
+  height: 100vh;           /* Pleine hauteur */
+  background: rgba(0,0,0,0.5); /* Fond sombre semi-transparent */
+  display: flex;           /* Pour centrer facilement */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center;     /* Centre verticalement */
+  z-index: 1000;           /* Au-dessus des autres éléments */
+}
+
+.modal-image {
+  max-width: 90vw;         /* Largeur max à 90% de la fenêtre */
+  max-height: 90vh;        /* Hauteur max à 90% de la fenêtre */
+  box-shadow: 0 0 15px rgba(0,0,0,0.7); /* Ombre portée sympa */
+  border-radius: 8px;      /* Bords arrondis */
+  cursor: pointer;         /* Indique que c’est cliquable */
+  background-color: white; /* Optionnel, si l’image a transparence */
 }
